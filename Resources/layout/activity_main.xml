@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:src="@drawable/ratarata"/>
+        android:scaleType="fitXY"/>
+
+            <!-- Título -->
+      <TextView
+          android:id="@+id/titulo"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Convertidor peso chileno"
+          android:textSize="24sp"
+          android:textStyle="bold"
+          android:textColor="#6A1B9A"
+          android:layout_marginTop="16dp"
+          android:layout_centerHorizontal="true"/>
+
+      <!-- Introducción -->
+      <TextView
+          android:id="@+id/introduccion"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="En el cuadro de abajo digita el monto chileno a convertir"
+          android:textColor="#6A1B9A"
+          android:layout_marginTop="16dp"
+          android:layout_below="@id/titulo"
+          android:layout_centerHorizontal="true"/>
+
+      <!-- Campo para ingresar la cantidad de pesos chilenos -->
+      <EditText
+          android:id="@+id/cantidad_chilenos"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Ingresa la cantidad de pesos chilenos"
+          android:textColor="#6A1B9A"
+          android:inputType="number"
+          android:digits="0123456789"
+          android:layout_marginTop="16dp"
+          android:layout_below="@id/introduccion"
+          android:layout_centerHorizontal="true"/>
+
+      <!-- Botón para realizar la conversión -->
+      <Button
+          android:id="@+id/btn_convertir"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Convertir"
+android:textColor="#6A1B9A"
+          android:background="@color/colorPrimary"
+          android:layout_marginTop="16dp"
+          android:layout_below="@id/cantidad_chilenos"
+          android:layout_alignParentLeft="true"
+          android:layout_marginLeft="16dp"/>
+
+      <!-- Botón para limpiar el campo de entrada -->
+      <Button
+          android:id="@+id/btn_limpiar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Limpiar"
+          android:textColor="#6A1B9A"
+          android:background="@color/colorAccent"
+          android:layout_marginTop="16dp"
+          android:layout_below="@id/cantidad_chilenos"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="16dp"/>
+
+      <!-- Espacio para mostrar el resultado de la conversión -->
+      <TextView
+          android:id="@+id/cantidad_mexicanos"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Aqui aparecera tu convercion"
+          android:textColor="#6A1B9A"
+          android:layout_marginTop="16dp"
+          android:layout_below="@id/btn_convertir"
+          android:layout_centerHorizontal="true"/>
+
+  <!-- Texto de derechos reservados -->
+  <TextView
+      android:id="@+id/derechos_reservados"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+          android:text="© Todos los derechos reservados Gary M.P"
+      android:textSize="12sp"
+      android:textColor="#CB3C36"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:paddingBottom="16dp"/>
+
+
+</RelativeLayout>
