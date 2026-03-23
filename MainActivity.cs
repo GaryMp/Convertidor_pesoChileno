@@ -29,15 +29,17 @@ namespace ConversorDeMoneda1
 
         private void BtnConvertir_Click(object sender, System.EventArgs e)
         {
-            // Obtener la tasa de cambio actual
-            double tasaDeCambio = 0.023; // 1 peso chileno = 0.023 pesos mexicanos
-
             // Convertir la cantidad ingresada de pesos chilenos a pesos mexicanos
-            double cantidadCh = double.Parse(cantidadChilenos.Text.Trim());
-            double cantidadMex = cantidadCh * tasaDeCambio;
-
-            // Mostrar el resultado en la etiqueta correspondiente
-            cantidadMexicanos.Text = "Tu conversión es: " + cantidadMex.ToString("N2");
+            if (Convertidor.TryConvertir(cantidadChilenos.Text.Trim(), out double cantidadMex))
+            {
+                // Mostrar el resultado en la etiqueta correspondiente
+                cantidadMexicanos.Text = "Tu conversión es: " + cantidadMex.ToString("N2");
+            }
+            else
+            {
+                // Manejar entradas no numéricas sin lanzar excepciones
+                cantidadMexicanos.Text = "Entrada inválida";
+            }
         }
 
         private void BtnLimpiar_Click(object sender, System.EventArgs e)
